@@ -8,7 +8,4 @@ RUN pip install -r requirements.txt
 
 ADD . /usr/src/app
 
-# collect static files
-RUN python manage.py collectstatic --noinput
-
 CMD gunicorn mpharma.wsgi:application --bind 0.0.0.0:$PORT
