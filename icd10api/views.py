@@ -1,4 +1,3 @@
-# from django.shortcuts import render
 from rest_framework import viewsets
 from rest_framework import permissions
 from rest_framework.versioning import NamespaceVersioning
@@ -19,8 +18,6 @@ class CodeViewSet(viewsets.ModelViewSet):
     versioning_class = CodeVersioning
     queryset = Code.objects.all().order_by('-id')
     serializer_class = CodeSerializer
-    # permission_classes = [permissions.IsAuthenticated]
-
 
 class CategoryViewSet(viewsets.ModelViewSet):
     """
@@ -29,7 +26,6 @@ class CategoryViewSet(viewsets.ModelViewSet):
     versioning_class = CodeVersioning
     queryset = Category.objects.all().order_by('-id')
     serializer_class = CategorySerializer
-    # permission_classes = [permissions.IsAuthenticated]
 
 
 
