@@ -1,4 +1,4 @@
-## Docker installation
+## mpharma PyICD10REST
 ### Overview
 The major tools involved in this project are; [djangorestframework](https://www.django-rest-framework.org/) (DRF) and [Django](https://www.djangoproject.com/) itself. And as such it follows the basic structure of a Django app.
 
