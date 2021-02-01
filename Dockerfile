@@ -1,11 +1,10 @@
 FROM python:3
 
-WORKDIR /usr/src/app
+WORKDIR /code
 
-ADD requirements.txt /usr/src/app
+COPY requirements.txt /code/
+COPY .env /code/
 
 RUN pip install -r requirements.txt
 
-ADD . /usr/src/app
-
-CMD gunicorn mpharma.wsgi:application --bind 0.0.0.0:$PORT
+COPY . /code/
